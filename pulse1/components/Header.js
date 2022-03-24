@@ -59,6 +59,9 @@ const Header = () => {
                 </>
                 ) : (
                 <div className="dropdown d-flex align-items-center">
+
+                    <div className="nav-item me-4 ms-4">Hi {user.name} !</div>
+
                   <div className="d-flex align-items-center">
                     <div className="nav-item">
                       <a
@@ -84,7 +87,35 @@ const Header = () => {
                           style={{ fontSize: 20, color: "black" }}
                           className="me-2"
                         />
-                        Add Business card
+                        Add Library
+                      </a>
+                    </div>
+
+                    <div className="nav-item">
+                      <a
+                        className="nav-link px-2 text-white d-flex align-items-center mx-2"
+                        href="/profile"
+                      >
+                        {/* <FontAwesomeIcon
+                          icon={faPlusCircle}
+                          style={{ fontSize: 20, color: "black" }}
+                          className="me-2"
+                        /> */}
+                        View Profile
+                      </a>
+                    </div>
+
+                    <div className="nav-item">
+                      <a
+                        className="nav-link px-2 text-white d-flex align-items-center mx-2"
+                        href="/library"
+                      >
+                        {/* <FontAwesomeIcon
+                          icon={faPlusCircle}
+                          style={{ fontSize: 20, color: "black" }}
+                          className="me-2"
+                        /> */}
+                        View Library
                       </a>
                     </div>
 
@@ -92,7 +123,6 @@ const Header = () => {
                   </div>
                   
                   <div className="d-flex align-items-center">
-                    <div className="nav-item me-4 ms-4">Hi {user.name} !</div>
                     <div className="nav-item ms-4 d-flex align-items-center">
                       <FontAwesomeIcon
                         icon={faSignOut}

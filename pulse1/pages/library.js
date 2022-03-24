@@ -1,4 +1,4 @@
-import PostTask from "../components/PostProfile";
+import PostProfile from "../components/PostLibrary";
 //import styles from "../styles/Home.module.css";
 import axios from "axios";
 
@@ -19,7 +19,7 @@ export default function Home({ posts }) {
               style={{ flexWrap: "wrap" }}
             >
               {posts.map((post, i) => (
-                <PostTask post={post} key={i} />
+                <PostProfile post={post} key={i} />
               ))}
             </div>
           )}

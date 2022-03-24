@@ -27,7 +27,7 @@ export default function PostProfile({ post }) {
         response.data;
         //localStorage.setItem("data", JSON.stringify(response.data));
 
-        window.location = "/";
+        window.location = "/profile";
       })
       .catch((err) => {
         console.log(err);
@@ -54,21 +54,25 @@ export default function PostProfile({ post }) {
               className="card-title mx-3"
               style={{ fontSize: "1.1rem" }}
             >
-              {post.company_name}
+              Profil
             </h6>
           </div>
 
 
           <div className="p-2">
-            <p className="card-text">{post.name}</p>
+            <p className="card-text"> Name : {post.name}</p>
           </div>
 
           <div className="p-2">
-            <p className="card-text">{post.email}</p>
+            <p className="card-text"> Company Name : {post.company_name}</p>
           </div>
 
           <div className="p-2">
-            <p className="card-text">{post.telephone}</p>
+            <p className="card-text"> Email : {post.email}</p>
+          </div>
+
+          <div className="p-2">
+            <p className="card-text"> Telephone : {post.telephone}</p>
           </div>
 
 

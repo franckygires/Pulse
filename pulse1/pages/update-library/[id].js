@@ -37,7 +37,7 @@ export default function UpdateProfile(postId) {
         response.data;
         //localStorage.setItem("data", JSON.stringify(response.data));
 
-        window.location = "/";
+        window.location = "/library";
       })
       .catch((err) => {
         console.log(err);

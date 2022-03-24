@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
-        Welcome
+        {/* Welcome */}
+        <img src="pulse.jpeg" alt="" />
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default function AddProfile() {
 
   const username = user.name
   
-  const handleProfile = async (e) => {
+  const handleLibrary = async (e) => {
     e.preventDefault();
 
     // reset error and message
@@ -43,7 +43,7 @@ export default function AddProfile() {
         .then((response) => {
           console.log(response.data);
           response.data;
-          window.location = "/";
+          window.location = "/library";
         })
         .catch((err) => {
           console.log(err);
@@ -51,72 +51,96 @@ export default function AddProfile() {
   };
 
   return (
-    <div>
+    <div className="d-flex flex-column min-vh-100">
       <Header />
-      <div className={styles.container}>
-        <form onSubmit={handleProfile} className={styles.form}>
+
+      <div className="container my-5">
+        <form
+          onSubmit={handleLibrary}
+          style={{ width: "90%", maxWidth: "600px", margin: "3rem auto" }}
+        >
           {error ? (
-            <div className={styles.formItem}>
-              <h3 className={styles.error}>{error}</h3>
+            <div className="mb-3">
+              <h3 className="text-red">{error}</h3>
             </div>
           ) : null}
           {message ? (
-            <div className={styles.formItem}>
-              <h3 className={styles.message}>{message}</h3>
+            <div className="mb-3">
+              <h3 className="text-red">{message}</h3>
             </div>
           ) : null}
 
+          <h4>Business Card</h4>
 
-          <div className={styles.formItem}>
-            <label>Name</label>
+          
+          <div className="mb-3">
+            <label htmlFor="firstnameInput1" className="form-label">
+              Name
+            </label>
             <input
-              type="text"
               name="name"
+              type="text"
+              className="form-control"
+              id="nameInput1"
               onChange={(e) => setName(e.target.value)}
               value={name}
-              placeholder="name"
               
             />
           </div>
 
 
-          <div className={styles.formItem}>
-            <label>Company Name</label>
+          <div className="mb-3">
+            <label htmlFor="firstnameInput1" className="form-label">
+              Company Name
+            </label>
             <input
-              type="text"
               name="company_name"
+              type="text"
+              className="form-control"
+              id="nameInput1"
               onChange={(e) => setCompany_name(e.target.value)}
               value={company_name}
-              placeholder="Company name"
+              
             />
           </div>
 
-          <div className={styles.formItem}>
-            <label>Email</label>
+
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
+              Email
+            </label>
             <input
-              type="email"
               name="email"
+              type="email"
+              className="form-control "
+              id="exampleInputEmail1"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
-              placeholder="Email.."
               required
             />
+
+            
           </div>
 
-          <div className={styles.formItem}>
-            <label>Telephone</label>
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
+              Telephone
+            </label>
             <input
-              name="telephone"
+              name="password"
+              type="password"
+              className="form-control"
+              id="exampleInputPassword1"
               onChange={(e) => setTelephone(e.target.value)}
               value={telephone}
-              placeholder="Phone Number"
+              
             />
+           
           </div>
 
-
-          <div className={styles.formItem}>
-            <button type="submit">Add Profile</button>
-          </div>
+          <button type="submit" className="btn btn-primary">
+            Add Business Card
+          </button>
         </form>
       </div>
     </div>

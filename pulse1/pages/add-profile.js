@@ -50,7 +50,7 @@ export default function AddProfile() {
           .then((response) => {
             console.log(response.data);
             response.data;
-            window.location = "/";
+            window.location = "/profile";
           })
           .catch((err) => {
             console.log(err);
@@ -58,74 +58,99 @@ export default function AddProfile() {
     };
 
     return (
-      <div>
-        <Header />
-        <div className={styles.container}>
-          <form onSubmit={handleProfile} className={styles.form}>
-            {error ? (
-              <div className={styles.formItem}>
-                <h3 className={styles.error}>{error}</h3>
-              </div>
-            ) : null}
-            {message ? (
-              <div className={styles.formItem}>
-                <h3 className={styles.message}>{message}</h3>
-              </div>
-            ) : null}
+      <div className="d-flex flex-column min-vh-100">
+      <Header />
 
-
-            <div className={styles.formItem}>
-              <label>Name</label>
-              <input
-                type="text"
-                name="name"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                placeholder="name"
-                required
-              />
+      <div className="container my-5">
+        <form
+          onSubmit={handleProfile}
+          style={{ width: "90%", maxWidth: "600px", margin: "3rem auto" }}
+        >
+          {error ? (
+            <div className="mb-3">
+              <h3 className="text-red">{error}</h3>
             </div>
-
-
-            <div className={styles.formItem}>
-              <label>Company Name</label>
-              <input
-                type="text"
-                name="company_name"
-                onChange={(e) => setCompany_name(e.target.value)}
-                value={company_name}
-                placeholder="Company name"
-              />
+          ) : null}
+          {message ? (
+            <div className="mb-3">
+              <h3 className="text-red">{message}</h3>
             </div>
+          ) : null}
 
-            <div className={styles.formItem}>
-              <label>Email</label>
-              <input
-                type="email"
-                name="email"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                placeholder="Email.."
-              />
-            </div>
+          <h4>Profile</h4>
 
-            <div className={styles.formItem}>
-              <label>Telephone</label>
-              <input
-                name="telephone"
-                onChange={(e) => setTelephone(e.target.value)}
-                value={telephone}
-                placeholder="Phone Number"
-              />
-            </div>
+          
+          <div className="mb-3">
+            <label htmlFor="firstnameInput1" className="form-label">
+              Name
+            </label>
+            <input
+              name="name"
+              type="text"
+              className="form-control"
+              id="nameInput1"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              required
+            />
+          </div>
 
 
-            <div className={styles.formItem}>
-              <button type="submit">Add Profile</button>
-            </div>
-          </form>
-        </div>
+          <div className="mb-3">
+            <label htmlFor="firstnameInput1" className="form-label">
+              Company Name
+            </label>
+            <input
+              name="company_name"
+              type="text"
+              className="form-control"
+              id="nameInput1"
+              onChange={(e) => setCompany_name(e.target.value)}
+              value={company_name}
+              
+            />
+          </div>
+
+
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
+              Email
+            </label>
+            <input
+              name="email"
+              type="email"
+              className="form-control "
+              id="exampleInputEmail1"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              
+            />
+
+            
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
+              Telephone
+            </label>
+            <input
+              name="password"
+              type="password"
+              className="form-control"
+              id="exampleInputPassword1"
+              onChange={(e) => setTelephone(e.target.value)}
+              value={telephone}
+              
+            />
+           
+          </div>
+
+          <button type="submit" className="btn btn-primary">
+            Add Profile
+          </button>
+        </form>
       </div>
+    </div>
     );
 
 
