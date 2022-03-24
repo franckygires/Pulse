@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     indexContainer: {
-        backgroundColor: '#3E3364',
+        backgroundColor: '#7393B3',
         borderRadius: 12,
         marginRight: 10,
         alignItems: 'center',
