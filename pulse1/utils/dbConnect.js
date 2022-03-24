@@ -12,8 +12,8 @@ async function dbConnect() {
     //     useUnifiedTopology: true,
     // });
 
-
-    const db = mongoose.connect("mongodb://localhost:27017/pulse", {
+    // mongodb+srv://root:root@cluster0.1jr5u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+    const db = mongoose.connect("mongodb+srv://root:root@cluster0.1jr5u.mongodb.net/pulse?retryWrites=true&w=majority", {
       useNewUrlParser: "true",
       useUnifiedTopology: "true",
     });
@@ -23,4 +23,6 @@ async function dbConnect() {
 }
 
 export default dbConnect;
+
+
 

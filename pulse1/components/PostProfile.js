@@ -21,7 +21,7 @@ export default function PostProfile({ post }) {
       //e.preventDefault();
 
     axios
-      .delete(`http://localhost:3000/api/profils/${post._id}`)
+      .delete(`https://test-pulse.herokuapp.com/api/profils/${post._id}`)
       .then((response) => {
         //console.log(response.data);
         response.data;

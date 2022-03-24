@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 
+import Head from 'next/head'
+
   
 
 
@@ -40,7 +42,7 @@ export default function AddProfile() {
       setMessage("");
 
         axios
-          .post("http://localhost:3000/api/profils", {
+          .post("https://test-pulse.herokuapp.com/api/profils", {
             name,
             company_name,
             email,
@@ -58,7 +60,18 @@ export default function AddProfile() {
     };
 
     return (
+
+      
+      // <meta name="viewport" content="width=device-width, initial-scale=1"><meta/>
+
+      <div>
+
+        {/* <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        </Head> */}
+
       <div className="d-flex flex-column min-vh-100">
+
       <Header />
 
       <div className="container my-5">
@@ -134,10 +147,10 @@ export default function AddProfile() {
               Telephone
             </label>
             <input
-              name="password"
-              type="password"
+              name="telephone"
+              type="tel"
               className="form-control"
-              id="exampleInputPassword1"
+              id="exampleInputtelephone1"
               onChange={(e) => setTelephone(e.target.value)}
               value={telephone}
               
@@ -151,6 +164,8 @@ export default function AddProfile() {
         </form>
       </div>
     </div>
+    </div>
+    
     );
 
 

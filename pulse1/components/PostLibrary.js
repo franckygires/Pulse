@@ -26,7 +26,7 @@ export default function PostLibrary({ post }) {
       //e.preventDefault();
 
     axios
-      .delete(`http://localhost:3000/api/library/${post._id}`)
+      .delete(`https://test-pulse.herokuapp.com/api/library/${post._id}`)
       .then((response) => {
         //console.log(response.data);
         response.data;

@@ -33,7 +33,7 @@ export default function AddProfile() {
     setMessage("");
 
       axios
-        .post("http://localhost:3000/api/library", {
+        .post("https://test-pulse.herokuapp.com/api/library", {
           name,
           company_name,
           email,
@@ -127,10 +127,10 @@ export default function AddProfile() {
               Telephone
             </label>
             <input
-              name="password"
-              type="password"
+              name="telephone"
+              type="tel"
               className="form-control"
-              id="exampleInputPassword1"
+              id="exampleInputtelephone1"
               onChange={(e) => setTelephone(e.target.value)}
               value={telephone}
               

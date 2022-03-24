@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <header className="p-3 mb-2 bg-primary text-white">
+    <header className="p-3 mb-2 bg-primary text-white @media (max-width: 600px)">
       <div className="container">
         <div className="d-flex flex-wrap justify-content-between">
           <a

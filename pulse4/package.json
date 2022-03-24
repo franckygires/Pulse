@@ -22,8 +22,7 @@
     "node": "^14.19.0"
   },
   "keywords": [
-    "express-api",
-    "heroku"
+    "express-api"
   ],
   "devDependencies": {
     "nodemon": "^2.0.15"

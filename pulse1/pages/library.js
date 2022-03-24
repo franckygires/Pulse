@@ -33,7 +33,7 @@ export default function Home({ posts }) {
 export async function getServerSideProps(context) {
   let data = [];
   await axios
-    .get("http://localhost:3000/api/library")
+    .get("https://test-pulse.herokuapp.com/api/library")
     .then((response) => {
       console.log(response.data.data);
       data = response.data.data;

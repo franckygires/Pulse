@@ -25,7 +25,7 @@ export default function UpdateProfile(postId) {
     setMessage("");
     
     axios
-      .put(`http://localhost:3000/api/profils/${post._id}`, {
+      .put(`https://test-pulse.herokuapp.com/api/profils/${post._id}`, {
           
         name,
         company_name,
@@ -125,7 +125,7 @@ export default function UpdateProfile(postId) {
 }
 
 export async function getServerSideProps(context) {
-    const url = `http://localhost:3000/api/profils/${context.params.id}`;
+    const url = `https://test-pulse.herokuapp.com/api/profils/${context.params.id}`;
     let data = [];
   try {
     const response = await axios.get(url);

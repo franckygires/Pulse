@@ -22,7 +22,7 @@ export default function Register() {
 
 
     axios
-      .post("http://localhost:3000/api/auth/signup", {
+      .post("https://test-pulse.herokuapp.com/api/auth/signup", {
         name,
         email,
         password,
