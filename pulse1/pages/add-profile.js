@@ -52,7 +52,7 @@ export default function AddProfile() {
           .then((response) => {
             console.log(response.data);
             response.data;
-            window.location = "/profile";
+            window.location = "/";
           })
           .catch((err) => {
             console.log(err);

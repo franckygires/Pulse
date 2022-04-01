@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <header className="p-3 mb-2 bg-primary text-white @media (max-width: 600px)">
+    <header className="p-3 mb-2 bg-primary text-white">
       <div className="container">
         <div className="d-flex flex-wrap justify-content-between">
           <a
@@ -41,6 +41,15 @@ const Header = () => {
 
           <div className="text-end d-flex justify-content-between">
             <div className=" mb-2 mb-lg-0 d-flex">
+
+
+
+
+
+
+
+
+
               {!user ? (
                 <>
                   <div className="nav-item">
@@ -58,11 +67,11 @@ const Header = () => {
                   </div>
                 </>
                 ) : (
-                <div className="dropdown d-flex align-items-center">
+                <div className="dropdown d-flex align-items-center grandMenu">
 
                     <div className="nav-item me-4 ms-4">Hi {user.name} !</div>
 
-                  <div className="d-flex align-items-center">
+                  <div className="d-flex align-items-center sousMenu">
                     <div className="nav-item">
                       <a
                         className="nav-link px-2 text-white d-flex align-items-center mx-2"
@@ -94,7 +103,7 @@ const Header = () => {
                     <div className="nav-item">
                       <a
                         className="nav-link px-2 text-white d-flex align-items-center mx-2"
-                        href="/profile"
+                        href="/"
                       >
                         {/* <FontAwesomeIcon
                           icon={faPlusCircle}
@@ -118,11 +127,6 @@ const Header = () => {
                         View Library
                       </a>
                     </div>
-
-
-                  </div>
-                  
-                  <div className="d-flex align-items-center">
                     <div className="nav-item ms-4 d-flex align-items-center">
                       <FontAwesomeIcon
                         icon={faSignOut}
@@ -131,7 +135,19 @@ const Header = () => {
                       />
                       <div className="ms-3">logout</div>
                     </div>
+
                   </div>
+                  
+                  {/* <div className="d-flex align-items-center">
+                    <div className="nav-item ms-4 d-flex align-items-center">
+                      <FontAwesomeIcon
+                        icon={faSignOut}
+                        onClick={Logout}
+                        style={{ fontSize: 30, color: "red" }}
+                      />
+                      <div className="ms-3">logout</div>
+                    </div>
+                  </div> */}
                 </div>
               )}
             </div>

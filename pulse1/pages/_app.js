@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-//import "bootstrap/dist/js/bootstrap"
 import "../styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core";

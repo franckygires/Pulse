@@ -30,7 +30,7 @@ export default function Login() {
         response.data;
         localStorage.setItem('data', JSON.stringify(response.data))
 
-        window.location = "/profile";
+        window.location = "/";
       })
       .catch((err) => {
         console.log(err);

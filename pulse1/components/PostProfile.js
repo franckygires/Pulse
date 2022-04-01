@@ -27,7 +27,7 @@ export default function PostProfile({ post }) {
         response.data;
         //localStorage.setItem("data", JSON.stringify(response.data));
 
-        window.location = "/profile";
+        window.location = "/";
       })
       .catch((err) => {
         console.log(err);
@@ -37,7 +37,7 @@ export default function PostProfile({ post }) {
   return (
     <>
       <div
-        className="card m-4 p-0 w-25"
+        className="card m-4 p-0 w-25 unCard"
         style={{
           fontSize: "1.1rem",
           borderRadius: "20px",
